@@ -1,11 +1,12 @@
 import { Home } from './Pages'
-import { Nav } from './Components'
+import { Nav, Pagination } from './Components'
 
 
 function App() {
   return (
     <>
     <Nav/>
+    <Pagination/>
     <Home/>
     </>
   )

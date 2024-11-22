@@ -1,30 +1,26 @@
 import '../index.css'
 import { useState } from 'react'
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 
-const Button = ({ cusStyle, title, hoverProperty, dest, tab }) => {
+const SubmitButton = ({ cusStyle, title, hoverProperty, children }) => {
   const [isHovered, onHover] = useState(false);
   return(
   <>
-  <Link
-  to={dest}
-  target={tab} rel="noopener noreferrer"
+  <div 
   onMouseEnter={() => onHover(true)} 
   onMouseLeave={() => onHover(false)} 
-  className={`btn ${cusStyle} ${isHovered ? hoverProperty : ''}`}>
+  className={`btn submit-btn ${cusStyle} ${isHovered ? hoverProperty : ''}`}>
     {title}
-  </Link>
+    <div className='submit-logo'>{children}</div>
+  </div>
   </>)
 }
 
-Button.propTypes = {
+SubmitButton.propTypes = {
   title: PropTypes.string,
   cusStyle: PropTypes.string,
   hoverProperty: PropTypes.string,
   children: PropTypes.node,
-  dest: PropTypes.string,
-  tab: PropTypes.string,
 }
 
-export default Button
+export default SubmitButton

@@ -2,7 +2,11 @@ import PropTypes from 'prop-types';
 
 const DisplayCard = ({name, mspr, price, image}) => {
   return (
-    <div></div>
+    <div className='card'>
+      <img src={image} className='image'></img>
+      <div className='name'>{name}</div>
+      <div className='price'>${price}</div>
+    </div>
   );
 }
 

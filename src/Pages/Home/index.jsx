@@ -2,7 +2,7 @@ import { DisplayCard } from '../../Components';
 import axios from 'axios';
 import { useCallback } from 'react';
 import { useEffect, useState } from 'react';
-
+import '../index.css'
 
 
 const Home = () => {
@@ -32,7 +32,7 @@ useEffect(() => {
   }, [fetchData]);
 
   return (
-    <div>
+    <div className='home'>
       {data.map(
         (item) => {
           return(<>

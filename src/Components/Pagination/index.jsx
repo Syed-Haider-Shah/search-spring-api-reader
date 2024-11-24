@@ -29,7 +29,7 @@ const Pagination = ({ pageData, searchKey }) => {
         )}
 
 
-        {(pageData.currentPage !== pageData.totalPages ) ? (<button onClick={() => handleClick(pageData.currentPage)}className='pagination-btn'>{pageData.currentPage}</button>): <button onClick={() => handleClick(1)}className='pagination-btn'>{1}</button>}
+        {(pageData.currentPage !== pageData.totalPages ) ? (<button onClick={() => handleClick(pageData.currentPage)}className='pagination-btn selected'>{pageData.currentPage}</button>): <button onClick={() => handleClick(1)}className='pagination-btn'>{1}</button>}
         {(pageData.currentPage < pageData.totalPages-2 ) ? (<button onClick={() => handleClick(pageData.nextPage)}className='pagination-btn'>{pageData.nextPage}</button>): <></>}
         {(pageData.currentPage < pageData.totalPages-1 )  ? (<button onClick={() => handleClick(pageData.nextPage + 1)} className='pagination-btn'>{pageData.nextPage + 1}</button>): <></>}
         <div className='pagination-dot'>...</div>

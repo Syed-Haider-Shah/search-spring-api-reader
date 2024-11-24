@@ -94,11 +94,13 @@ body {
 }
 
 .logo2{
+  background: transparent;
   height:60px;
   color: white;
+}
+.logo {
   margin: 0 80px;
 }
-
 .searchbar{
   padding: 10px 80px;
 }

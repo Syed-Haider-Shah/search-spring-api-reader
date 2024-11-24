@@ -40,7 +40,7 @@ const Detail = () => {
       {data.length !== 0 ? (
         <>
           <h1>Detail Page</h1>
-          <Pagination pageData={pageData} />
+          <Pagination pageData={pageData} searchKey={searchKey} />
           <div className='details-page'>
             {data.map((item) => (
               <DisplayCard

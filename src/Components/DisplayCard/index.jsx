@@ -12,8 +12,8 @@ const DisplayCard = ({name, mspr, price, image}) => {
 
 DisplayCard.propTypes = { 
   name: PropTypes.string.isRequired, 
-  mspr: PropTypes.number.isRequired, 
-  price: PropTypes.number.isRequired,
+  mspr: PropTypes.string, 
+  price: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired
 }
 export default DisplayCard;

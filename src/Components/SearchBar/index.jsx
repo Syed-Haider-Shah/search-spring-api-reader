@@ -1,18 +1,27 @@
 import '../index.css'
 import { useState } from 'react'
 import { ArrowUp } from 'lucide-react'
-import SubmitButton from '../SubmitButton';
+import { useNavigate } from 'react-router-dom';
 
 const SearchBar = () => {
 
-  const [searchKey, setKey] = useState('')
+  const [searchKey, setSearchKey] = useState('')
+  //const [q, setQ] = useState('')
+  const navigate = useNavigate();
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault()
+  //     setQ(searchKey);
+  //     console.log('Saving Search Term:', searchKey)
+  //     setKey('')
+  //     console.log('value of q', q)
+  // }
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     if (searchKey.trim()) {
-      console.log('Saving Search Term:', searchKey)
-      setKey('')
+      navigate(`/detail?search=${searchKey}`);
     }
-  }
+  };
 
   return(
     <>
@@ -20,16 +29,18 @@ const SearchBar = () => {
         <input
           type="text"
           value={searchKey}
-          onChange={(e) => setKey(e.target.value)}
+          onChange={(e) => setSearchKey(e.target.value)}
           placeholder="Search Term..."
           className="searchbar"
         />
-        <SubmitButton cusStyle='search-btn'>
+        <button className='search-btn'>
           <ArrowUp color={'white'}/>
-          </SubmitButton>
+          </button>
       </form>
     </>
   )
 }
 
 export default SearchBar
+
+

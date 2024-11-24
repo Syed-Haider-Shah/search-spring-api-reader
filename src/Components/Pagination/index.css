@@ -1,5 +1,4 @@
 .pagination {
-  background: red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,6 +13,7 @@
   height: 30px;
   border: 0;
   font-size: 20px;
+  padding: 2px 12px;
 }
 
 .pagination-btn:hover {
@@ -22,7 +22,7 @@
 }
 
 .pagination-btn-disabled{
-  color: grey;
+  color: #afafb1;
   background:transparent;
   padding: 0;
   margin: 0 4px;
@@ -45,7 +45,6 @@
 
 .selected {
   background: rgb(33,41,54);
-  padding: 2px 6px;
   border-radius: 8px;
   }
   

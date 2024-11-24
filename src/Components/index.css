@@ -9,8 +9,9 @@ body {
 }
 .pagination {
   background: red;
-  height: 10vh;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .image{
   background: white;
@@ -143,4 +144,37 @@ body {
 
 .submit-btn {
   display: flex;
+}
+
+.pagination-btn {
+  color: #74c1c0;
+  cursor: pointer;
+  background:transparent;
+  padding: 0;
+  margin: 0 4px;
+  height: 30px;
+  border: 0;
+  font-size: 15px;
+}
+
+.pagination-btn:hover {
+  color: #4ea5a0;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.pagination-btn-disabled{
+  color: grey;
+  background:transparent;
+  padding: 0;
+  margin: 0 4px;
+  height: 30px;
+  border: 0;
+}
+
+.prev {
+
+}
+
+.next {
+
 }

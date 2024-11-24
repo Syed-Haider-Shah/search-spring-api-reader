@@ -9,8 +9,7 @@ const Detail = () => {
   const searchKey = searchParams.get('search');
   const page = searchParams.get('page');
   const [data, setData] = useState([]);
-  const [pageData, setPageData] = useState(null);
-  const [pageSelector, setPage] = useState(page);
+  const [pageData, setPageData] = useState('no');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -35,17 +34,32 @@ const Detail = () => {
     }
   }, [searchKey, page]);
 
+
   return (
     <>
-      <h1>Detail Page</h1> {/*change font*/}
-      <Pagination/>
-      <div className='details-page'>
-        {data.length > 0 ? data.map((item) => (
-          <DisplayCard key={item.id} name={item.name} price={item.price} msrp={item.msrp} image={item.thumbnailImageUrl} />
-        )) : (
-          <p>Loading...</p>
-        )}
-      </div>
+      {data.length !== 0 ? (
+        <>
+          <h1>Detail Page</h1>
+          <Pagination pageData={pageData} />
+          <div className='details-page'>
+            {data.map((item) => (
+              <DisplayCard
+                key={item.id}
+                name={item.name}
+                price={item.price}
+                msrp={item.msrp}
+                image={item.thumbnailImageUrl}
+              />
+            ))}
+          </div>
+        </>
+      ) : (
+        pageData !== 'no' ? (
+          <div>No Results</div>
+        ) : (
+          <div>Loading...</div>
+        )
+      )}
     </>
   );
 };

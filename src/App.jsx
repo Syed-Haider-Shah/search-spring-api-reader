@@ -1,5 +1,5 @@
 import { Home, Detail } from './Pages'
-import { Nav, Pagination } from './Components'
+import { Nav } from './Components'
 import {  Routes, Route } from 'react-router-dom'
 
 

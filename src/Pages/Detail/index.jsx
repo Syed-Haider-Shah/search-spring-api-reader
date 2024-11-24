@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { DisplayCard, Pagination, Heading } from '../../Components';
+import { DisplayCard, Pagination, Heading, Button, Loading } from '../../Components';
 import axios from 'axios';
 
 const Detail = () => {
@@ -56,9 +56,12 @@ const Detail = () => {
         </>
       ) : (
         pageData !== 'no' ? (
-          <div>No Results</div>
+          <div className='no-record'>
+          <Heading heading='Sorry No Results Were Found!'/>
+          <Button title='Take me Home'dest="/" cusStyle="no-result-btn"/>
+          </div>
         ) : (
-          <div>Loading...</div>
+          <Loading/>
         )
       )}
     </>

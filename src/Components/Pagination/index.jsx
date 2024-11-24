@@ -25,11 +25,15 @@ const Pagination = ({ pageData, searchKey }) => {
             <LucideChevronLeft />
           </button>
         )}
-        <button onClick={() => handleClick(pageData.currentPage)}className='pagination-btn'>{pageData.currentPage}</button>
-        <button onClick={() => handleClick(pageData.nextPage)}className='pagination-btn'>{pageData.nextPage}</button>
-        <button onClick={() => handleClick(pageData.nextPage + 1)} className='pagination-btn'>{pageData.nextPage + 1}</button>
+
+
+        {(pageData.currentPage !== pageData.totalPages ) ? (<button onClick={() => handleClick(pageData.currentPage)}className='pagination-btn'>{pageData.currentPage}</button>): <button onClick={() => handleClick(1)}className='pagination-btn'>{1}</button>}
+        {(pageData.currentPage < pageData.totalPages-2 ) ? (<button onClick={() => handleClick(pageData.nextPage)}className='pagination-btn'>{pageData.nextPage}</button>): <></>}
+        {(pageData.currentPage < pageData.totalPages-1 )  ? (<button onClick={() => handleClick(pageData.nextPage + 1)} className='pagination-btn'>{pageData.nextPage + 1}</button>): <></>}
         <div className='pagination-btn'>...</div>
         <button onClick={() => handleClick(pageData.totalPages)} className='pagination-btn'>{pageData.totalPages}</button>
+        
+        
         {pageData.currentPage === pageData.totalPages ? (
           <button className='disabled pagination-btn-disabled'>
             <LucideChevronRight />

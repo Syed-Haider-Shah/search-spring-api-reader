@@ -53,6 +53,7 @@ const Detail = () => {
               />
             ))}
           </div>
+          <Pagination pageData={pageData} searchKey={searchKey} />
         </>
       ) : (
         pageData !== 'no' ? (

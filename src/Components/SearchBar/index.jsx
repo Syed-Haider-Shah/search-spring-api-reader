@@ -7,14 +7,13 @@ import "./index.css"
 const SearchBar = ({formStyle, searchBarStyle, searchButtonStyle}) => {
 
   const [searchKey, setSearchKey] = useState('')
-  const page = '1';
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (searchKey.trim()) {
-      navigate(`/detail?search=${searchKey}&page=${page}`);
-    }
+   // if (searchKey.trim()) {
+      navigate(`/detail?search=${searchKey}&page=1`);
+ //   }
   };
 
   return(

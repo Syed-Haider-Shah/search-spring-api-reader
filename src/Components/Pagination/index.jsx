@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { LucideChevronLeft, LucideChevronRight } from 'lucide-react'; // Ensure these imports are correct
+import { LucideChevronLeft, LucideChevronRight } from 'lucide-react';
 import { RecordHeading } from '..';
 import "./index.css"
 
@@ -17,7 +17,7 @@ const handleClick = (next) => {
 return (
   <div className=''>
     <div className='pagination-cmpt'>
-    {<RecordHeading heading={`Results for : "${searchKey}"`}/>}
+    {<RecordHeading heading={`Results for : "${ searchKey ? searchKey: "All Results"}"`}/>}
     <div className='pagination pagination-btn'>
       {pageData.currentPage === 1 ? (
         <button className='disabled pagination-btn-disabled'>

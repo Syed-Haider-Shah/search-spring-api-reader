@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import "./index.css"
 
 const DisplayCard = ({ name, msrp, price, image }) => {
   return (
@@ -7,13 +8,13 @@ const DisplayCard = ({ name, msrp, price, image }) => {
       <div className='name'>{name}</div>
 
       {
-        price <= msrp ? (
-          <div className='price'>${price}</div>
-        ) : (
+        msrp > price ? (
           <div className='discount'>
-            <div className='slashed'>${price}</div>
-            <div className='price'>${msrp}</div>
+            <div className='slashed'>${msrp}</div>
+            <div className='price'>${price}</div>
           </div>
+        ) : (
+          <div className='price'>${price}</div>
         )}
 
     </div>

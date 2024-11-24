@@ -1,0 +1,7 @@
+.heading {
+  display: flex;
+  justify-content: center;
+  font-family: 'Pacifico', cursive;
+  color: rgb(33,41,54);
+  font-size: 40px;
+}

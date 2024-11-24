@@ -29,11 +29,10 @@ const Detail = () => {
       }
     };
 
-    if (searchKey) {
+    if (searchKey != null) {
       fetchData();
     }
   }, [searchKey, page]);
-
 
   return (
     <>

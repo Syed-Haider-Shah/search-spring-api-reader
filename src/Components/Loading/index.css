@@ -1,0 +1,12 @@
+.loading-logo {
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  animation: logoAnimate 1.5s infinite;
+}
+
+@keyframes logoAnimate { 
+  0%, 100% { opacity: 0; } 
+  50% { opacity: 1; } 
+}

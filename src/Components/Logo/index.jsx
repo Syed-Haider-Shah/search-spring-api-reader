@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import "./index.css";
 
 const Logo = ({ image, cusStyle, height }) => {
   return(

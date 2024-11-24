@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { LucideChevronLeft, LucideChevronRight } from 'lucide-react'; // Ensure these imports are correct
 import { RecordHeading } from '..';
+import "./index.css"
 
 const Pagination = ({ pageData, searchKey }) => {
   const [currentPage, setCurrentPage] = useState(pageData.currentPage);

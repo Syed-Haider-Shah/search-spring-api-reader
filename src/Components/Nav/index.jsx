@@ -1,6 +1,7 @@
 import Button from '../Button';
 import Logo from '../Logo';
 import SearchBar from '../SearchBar';
+import "./index.css";
 
 const Nav = () => {
   return(

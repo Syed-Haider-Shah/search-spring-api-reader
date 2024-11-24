@@ -1,8 +1,8 @@
-import '../index.css'
 import PropTypes from 'prop-types';
 import { useState } from 'react'
 import { ArrowUp } from 'lucide-react'
 import { useNavigate } from 'react-router-dom';
+import "./index.css"
 
 const SearchBar = ({formStyle, searchBarStyle, searchButtonStyle}) => {
 

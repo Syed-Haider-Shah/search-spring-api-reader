@@ -1,0 +1,8 @@
+.nav{
+  display: flex;
+  padding-left: 10%;
+  height: 12vh;
+  align-items: center;
+  background: rgb(33,41,54);
+  background: linear-gradient(122deg, rgba(33,41,54,1) 0%, rgba(33,41,54,1) 0%, rgba(33,41,54,0.9203139874113708) 94%);
+}

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { DisplayCard, Pagination } from '../../Components';
+import { DisplayCard, Pagination, Heading } from '../../Components';
 import axios from 'axios';
 
 const Detail = () => {
@@ -39,8 +39,9 @@ const Detail = () => {
     <>
       {data.length !== 0 ? (
         <>
-          <h1>Detail Page</h1>
-          <Pagination pageData={pageData} searchKey={searchKey} />
+        <Pagination pageData={pageData} searchKey={searchKey} />
+          <Heading heading="Details Page" />
+          
           <div className='details-page'>
             {data.map((item) => (
               <DisplayCard

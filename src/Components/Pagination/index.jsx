@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { LucideChevronLeft, LucideChevronRight } from 'lucide-react'; // Ensure these imports are correct
+import { RecordHeading } from '..';
 
 const Pagination = ({ pageData, searchKey }) => {
   const [currentPage, setCurrentPage] = useState(pageData.currentPage);
@@ -13,8 +14,9 @@ const Pagination = ({ pageData, searchKey }) => {
   };
 
   return (
-    <div>
-      <div>Search Term: {searchKey}</div>
+    <div className=''>
+      <div className='pagination-cmpt'>
+      {<RecordHeading heading={`Results for : "${searchKey}"`}/>}
       <div className='pagination pagination-btn'>
         {pageData.currentPage === 1 ? (
           <button className='disabled pagination-btn-disabled'>
@@ -43,6 +45,7 @@ const Pagination = ({ pageData, searchKey }) => {
             <LucideChevronRight />
           </button>
         )}
+        </div>
       </div>
     </div>
   );

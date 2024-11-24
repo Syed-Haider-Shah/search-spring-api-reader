@@ -1,18 +1,26 @@
 import PropTypes from 'prop-types';
 
-const DisplayCard = ({name, mspr, price, image}) => {
+const DisplayCard = ({name, msrp, price, image}) => {
   return (
     <div className='card'>
-      <img src={image} className='image'></img>
+      <img src={image} alt=" Item Image" className='image'></img>
       <div className='name'>{name}</div>
-      <div className='price'>${price}</div>
+
+      { price <= msrp ?
+      (<div className='price'>${price}</div>)
+      :
+      (<div className='discount'>
+        <div className='slashed'>${price}</div>
+        <div className='price'>${msrp}</div>
+      </div>)}
+      
     </div>
   );
 }
 
 DisplayCard.propTypes = { 
   name: PropTypes.string.isRequired, 
-  mspr: PropTypes.string, 
+  msrp: PropTypes.string, 
   price: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired
 }

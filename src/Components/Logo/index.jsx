@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Logo = ({ image, cusStyle, height }) => {
   return(
   <Link className='logo' to='/'>
-  <img src={image} height={height} className={cusStyle}/>
+  <img src={image} alt='Logo Image' height={height} className={cusStyle}/>
   </Link>
   )
 }

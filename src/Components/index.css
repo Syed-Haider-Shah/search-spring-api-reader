@@ -8,8 +8,9 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 .pagination {
-  background: #e3e6e6;
+  background: red;
   height: 10vh;
+
 }
 .image{
   background: white;

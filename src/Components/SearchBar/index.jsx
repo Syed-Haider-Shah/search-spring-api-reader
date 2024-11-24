@@ -6,20 +6,13 @@ import { useNavigate } from 'react-router-dom';
 const SearchBar = () => {
 
   const [searchKey, setSearchKey] = useState('')
-  //const [q, setQ] = useState('')
+  const page = '1';
   const navigate = useNavigate();
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault()
-  //     setQ(searchKey);
-  //     console.log('Saving Search Term:', searchKey)
-  //     setKey('')
-  //     console.log('value of q', q)
-  // }
   const handleSubmit = (e) => {
     e.preventDefault();
     if (searchKey.trim()) {
-      navigate(`/detail?search=${searchKey}`);
+      navigate(`/detail?search=${searchKey}&page=${page}`);
     }
   };
 
@@ -33,7 +26,7 @@ const SearchBar = () => {
           placeholder="Search Term..."
           className="searchbar"
         />
-        <button className='search-btn'>
+        <button type ='submit' className='search-btn'>
           <ArrowUp color={'white'}/>
           </button>
       </form>

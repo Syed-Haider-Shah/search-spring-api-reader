@@ -22,14 +22,28 @@ return (
     <PaginationBtn nextPage={pageData.previousPage} style="" searchKey={searchKey} isDisable={determineDisable(pageData.previousPage)}>
         <LucideChevronLeft/> 
       </PaginationBtn>
-        {/*-----------------------------------------------------------------------------------*/}
 
+      {/*if total more than 3 and we on last page*/}
+      {pageData.totalPages > 3 && pageData.currentPage === pageData.totalPages && 
+      (<>
+        <PaginationBtn nextPage={1} style="" searchKey={searchKey}>{1}</PaginationBtn>
+        <div className='dot'>...</div> 
+      </> 
+        )}
+
+      {/*logic for 3 number traversal*/}
       {pageData.previousPage !== 0 && <PaginationBtn nextPage={pageData.currentPage - 1} style="" searchKey={searchKey}>{pageData.previousPage}</PaginationBtn>}
       <PaginationBtn nextPage={pageData.currentPage} style=" selected" searchKey={searchKey}>{pageData.currentPage}</PaginationBtn>
-      {pageData.nextPage !== 0 && <PaginationBtn nextPage={pageData.currentPage + 1} style="" searchKey={searchKey}>{pageData.nextPage}</PaginationBtn>}
+      {pageData.nextPage !== 0 && pageData.nextPage !== pageData.totalPages && <PaginationBtn nextPage={pageData.currentPage + 1} style="" searchKey={searchKey}>{pageData.nextPage}</PaginationBtn>}
 
+      {/* total is more than 3 */}
+      {pageData.totalPages > 3 && pageData.currentPage < pageData.totalPages &&
+      (<>
+        <div className='dot'>...</div> 
+        <PaginationBtn nextPage={pageData.totalPages} style="" searchKey={searchKey}>{pageData.totalPages}</PaginationBtn>
+      </>
+      )}
 
-      {/*-----------------------------------------------------------------------------------*/}
       <PaginationBtn nextPage={pageData.nextPage} style="" searchKey={searchKey} isDisable={determineDisable(pageData.nextPage)}>
         <LucideChevronRight/> 
       </PaginationBtn>

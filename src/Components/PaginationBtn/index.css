@@ -1,0 +1,35 @@
+.pagination-btn {
+  color: white;
+  background:transparent;
+  padding: 0;
+  margin: 0 4px;
+  height: 30px;
+  border: 0;
+  font-size: 20px;
+  padding: 2px 12px;
+}
+
+
+.not-disabled {
+  cursor: pointer;
+}
+
+.not-disabled:hover {
+  color: rgb(33,41,54);
+  transition: background-color 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.disabled{
+  color: #afafb1;
+  background:transparent;
+}
+
+.selected {
+  background: rgb(33,41,54);
+  border-radius: 8px;
+  }
+  
+  .selected:hover {
+    color: #449894;
+    transition: background-color 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+  }

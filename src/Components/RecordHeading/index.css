@@ -3,3 +3,9 @@
   font-size: 24px;
   font-weight: normal;
 }
+
+@media (max-width: 600px) {
+  .record-heading {
+      font-size: 16px;
+  }
+}

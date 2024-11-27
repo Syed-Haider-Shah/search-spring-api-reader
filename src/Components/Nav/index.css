@@ -1,8 +1,25 @@
 .nav{
   display: flex;
-  padding-left: 10%;
-  height: 12vh;
+  flex-wrap: wrap;
+  padding: 10px 0;
   align-items: center;
+  justify-content: center;
   background: rgb(33,41,54);
   background: linear-gradient(122deg, rgba(33,41,54,1) 0%, rgba(33,41,54,1) 0%, rgba(33,41,54,0.9203139874113708) 94%);
+}
+
+.hide-on-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .hide-on-mobile {
+      display: none;
+  }
+  .nav {
+    display:flex;
+    flex-direction: row;
+  }
 }

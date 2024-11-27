@@ -7,7 +7,8 @@
 .pagination-cmpt {
   background:#4ea5a0;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   padding: 0 25%;
   border-radius: 0;

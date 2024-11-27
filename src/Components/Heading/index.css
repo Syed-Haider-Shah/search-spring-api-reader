@@ -5,3 +5,9 @@
   color: rgb(33,41,54);
   font-size: 40px;
 }
+
+@media (max-width: 600px) {
+  .heading {
+      font-size: 30px;
+  }
+}

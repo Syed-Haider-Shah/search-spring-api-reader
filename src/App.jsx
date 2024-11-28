@@ -1,5 +1,5 @@
-import { Home, Detail, NewHome } from './Pages'
-import { Nav } from './Components'
+import { Detail, NewHome } from './Pages'
+import { Footer, Nav } from './Components'
 import {  Routes, Route } from 'react-router-dom'
 
 
@@ -11,6 +11,7 @@ function App() {
        <Route path="/" element={<NewHome />} /> 
        <Route path="/detail" element={<Detail />}/>
       </Routes> 
+      <Footer/>
     </>
   )
 }

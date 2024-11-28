@@ -1,5 +1,6 @@
 body{
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
 }
 
 .btn {
@@ -10,19 +11,21 @@ body{
   border: 0;
   color: #f7f7f7;
   text-decoration: none;
-  background: red;
 }
 
 
 .btn:hover {
   text-shadow: 0px 0px 1px #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: text-decoration 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .nav-btn {
   padding: 10px;
   margin: 0 10px;
   background: transparent;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .no-result-btn {

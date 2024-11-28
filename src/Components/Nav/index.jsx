@@ -9,8 +9,11 @@ const Nav = () => {
   <nav className='nav'>
     <Logo image='/Logo3.png' cusStyle='logo2' height="60"/>
     <div className='hide-on-mobile'>
-    <Button title='Github Repo' cusStyle='nav-btn' dest='https://github.com/Syed-Haider-Shah/search-spring-api-reader'tab='_blank'/>
-    <Button title='Api Info' cusStyle='nav-btn' dest='https://help.searchspring.net/hc/en-us/sections/115000119223-Search-API'tab='_blank'/>
+    <Button title='Hats' cusStyle='nav-btn' dest='/detail?search=hats&page=1'/>
+    <Button title='Swimsuits' cusStyle='nav-btn' dest='/detail?search=swimsuits&page=1'/>
+    <Button title='Sunglasses' cusStyle='nav-btn' dest='/detail?search=sunglasses&page=1'/>
+    <Button title='Sandals' cusStyle='nav-btn' dest='/detail?search=sandals&page=1'/>
+    <Button title='Towels' cusStyle='nav-btn' dest='/detail?search=towels&page=1'/>
     </div>
     <SearchBar formStyle="form-nav" searchBarStyle="searchbar-nav" searchButtonStyle="search-btn-nav"/>
   </nav>

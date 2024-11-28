@@ -10,3 +10,10 @@
   0%, 100% { opacity: 0; } 
   50% { opacity: 1; } 
 }
+
+@media (max-width: 600px) {
+  .loading-logo {
+      height: 40vh;
+      margin: 100px 0;
+  }
+}

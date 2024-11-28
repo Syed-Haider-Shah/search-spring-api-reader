@@ -1,0 +1,10 @@
+.footer{
+  display: flex;
+  height: 60px;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  align-items: center;
+  justify-content: center;
+  background: rgb(33,41,54);
+  background: linear-gradient(122deg, rgba(33,41,54,1) 0%, rgba(33,41,54,1) 0%, rgba(33,41,54,0.9203139874113708) 94%);
+}

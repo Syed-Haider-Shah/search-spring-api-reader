@@ -1,7 +1,11 @@
 .logo2{
-  background: transparent;
   color: white;
 }
 .logo {
   margin: 0 80px;
+}
+@media (max-width: 600px) {
+  .logo2 {
+      height: 50px;
+  }
 }

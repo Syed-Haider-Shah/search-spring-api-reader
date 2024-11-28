@@ -49,6 +49,7 @@ const Detail = () => {
                 price={item.price}
                 msrp={item.msrp}
                 image={item.thumbnailImageUrl}
+                buttonText="Add to Cart"
               />
             ))}
           </div>

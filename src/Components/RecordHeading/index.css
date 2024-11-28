@@ -1,7 +1,10 @@
+
+
 .record-heading {
   color: white;
-  font-size: 24px;
-  font-weight: normal;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
 }
 
 @media (max-width: 600px) {

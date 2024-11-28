@@ -1,4 +1,4 @@
-import { Home, Detail } from './Pages'
+import { Home, Detail, NewHome } from './Pages'
 import { Nav } from './Components'
 import {  Routes, Route } from 'react-router-dom'
 
@@ -8,7 +8,7 @@ function App() {
     <>
       <Nav/>
       <Routes> 
-       <Route path="/" element={<Home />} /> 
+       <Route path="/" element={<NewHome />} /> 
        <Route path="/detail" element={<Detail />}/>
       </Routes> 
     </>

@@ -6,9 +6,8 @@ const DisplayCard = ({ name, msrp, price, image }) => {
     <div className='card'>
         <img src={image} alt="Item Image" className='image' />
       <div className='name'>{name}</div>
-
-      {
-        msrp > price ? (
+      <div className='bottom-section'>
+      {msrp > price ? (
           <div className='discount'>
             <div className='slashed'>${msrp}</div>
             <div className='price'>${price}</div>
@@ -16,7 +15,8 @@ const DisplayCard = ({ name, msrp, price, image }) => {
         ) : (
           <div className='price'>${price}</div>
         )}
-
+        <button className='display-btn'>+</button>
+        </div>
     </div>
   );
 };

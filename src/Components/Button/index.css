@@ -16,9 +16,6 @@ body{
 
 .btn:hover {
   text-shadow: 0px 0px 1px #ffffff;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  transition: text-decoration 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .nav-btn {
@@ -26,6 +23,12 @@ body{
   margin: 0 10px;
   background: transparent;
   font-size: 14px;
+}
+
+.nav-btn:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: text-decoration 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .no-result-btn {

@@ -9,7 +9,7 @@
   background: white;
   margin: 10px 0;
   display: flex;
-  height: 50vh;
+  height: 55vh;
   width: 32vh;
   align-items: center;
   padding-bottom: 20px;
@@ -53,4 +53,31 @@
     padding: 0 6px;
     background: #bb2a3d;
     border-radius: 6px;
+  }
+
+  .display-card-button {
+    background: rgb(33,41,54);
+    background: linear-gradient(122deg, rgba(33,41,54,1) 0%, rgba(33,41,54,1) 0%, rgba(33,41,54,0.9203139874113708) 94%);
+    margin: 8px 0;
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 6px
+  }
+
+  .bottom-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .display-btn {
+    background: rgb(33,41,54);
+    background: linear-gradient(122deg, rgba(33,41,54,1) 0%, rgba(33,41,54,1) 0%, rgba(33,41,54,0.9203139874113708) 94%);
+    border: 0;
+    cursor: pointer;
+    color: white;
+    border-radius: 20px;
+  }
+  .display-btn:hover {
+    padding: 8px 12px;
+    transition: padding 0.3s ease-in-out;
   }

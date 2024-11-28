@@ -1,4 +1,4 @@
-import { HomeDisplayCard, Heading } from '../../Components';
+import { HomeDisplayCard, Heading, Logo, SearchBar } from '../../Components';
 
 const NewHome = () => {
   return(
@@ -13,6 +13,9 @@ const NewHome = () => {
     <div className='para-box'>
       <p1 className='para'>Our store is a clothing company dedicated to making your clothing experience seamless. By specializing in a variety of items, we focus on delivering high-quality products at lower prices.</p1>
     </div>
+
+      <SearchBar searchBarStyle="search-bar-home" searchButtonStyle="search-btn-home" formStyle="form-home"/>
+
     <div className='section'>
       <h1 className='home-section-heading'>Pick from our Collection</h1>
       <div className='selection-section'>

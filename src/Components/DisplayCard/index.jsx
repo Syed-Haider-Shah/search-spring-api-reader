@@ -13,7 +13,9 @@ const DisplayCard = ({ name, msrp, price, image }) => {
             <div className='price'>${price}</div>
           </div>
         ) : (
-          <div className='price'>${price}</div>
+          <div className='discount'>
+            <div className='price'>${price}</div>
+          </div>
         )}
         <button className='display-btn'>+</button>
         </div>

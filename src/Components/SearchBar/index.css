@@ -58,6 +58,7 @@
 }
 
 .form-home {
+  margin: 60px 0;
   display: flex;
   justify-content: center;
   align-items: center;
